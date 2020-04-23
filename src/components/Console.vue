@@ -74,3 +74,13 @@ export default class Console extends Vue {
 </script>
 
 <style lang="stylus" scoped>
+
+.el-row {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #82848a;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+</style>
