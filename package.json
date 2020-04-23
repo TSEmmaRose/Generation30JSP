@@ -1,0 +1,12 @@
+{
+  "name": "titan-ide",
+  "version": "0.0.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "node --max_old_space_size=4096 node_modules/.bin/vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit",
+    "postinst
