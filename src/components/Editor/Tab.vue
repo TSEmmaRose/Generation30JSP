@@ -19,4 +19,30 @@ const namespace = 'workspace'
     }
 })
 export default class Tab extends Vue {
-  @Pr
+  @Prop(String) public code!: string
+  @State('receipts', { namespace }) public receipts!: any
+  @Getter('editorOptions', { namespace }) public editorOptions!: EditorOptions
+  @Mutation('setActiveFileCode', { namespace }) public setActiveFileCode: any
+
+  public height: number =  0
+  
+  public parsedReceipt(receipt: any) {
+    return Object.keys(receipt).map((j: any) => {
+          return {
+            key: j,
+            value: receipt[j]
+          }
+        })
+  }
+
+    public mounted(): void {
+        const { codemirror: codemirrorRef }: any = this.$refs.myCm
+    }
+
+    public onCmCodeChange(code: any) {
+        this.setActiveFileCode(code)
+    }
+
+    public onGutterClick(cm: any, n: any) {
+        const info = cm.lineInfo(n)
+        cm.setGutterM
