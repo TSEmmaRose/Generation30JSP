@@ -45,4 +45,21 @@ export default class Tab extends Vue {
 
     public onGutterClick(cm: any, n: any) {
         const info = cm.lineInfo(n)
-        cm.setGutterM
+        cm.setGutterMarker(n, 'breakpoints', info.gutterMarkers ? null : this.makeMarker())
+    }
+
+    public makeMarker() {
+        const marker = document.createElement('div')
+        marker.style.color = '#fff'
+        marker.innerHTML = '●'
+        return marker
+    }
+
+}
+</script>
+
+<style scoped lang="stylus">
+.codemirror {
+    width: 100%;
+}
+</style>
