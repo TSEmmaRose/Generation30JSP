@@ -185,3 +185,50 @@ export default class Accounts extends Vue {
     } catch (e) {
       // console.error(e)
       this.createAccount()
+    }
+  }
+
+  public async handleImportPKButtonClick(): Promise<void> {
+    if (this.isPrivateKeySet) {
+      this.$confirm('Do you want to unset the Private key ?', 'Warning', {
+        confirmButtonText: 'OK',
+        cancelButtonText: 'Cancel',
+        cancelButtonClass: 'secondaryButton',
+        type: 'warning',
+      })
+        .then(() => {
+          this.unsetPrivateKey()
+        })
+        .catch(e => {})
+    } else {
+      this.showImportDialog = true
+    }
+  }
+
+  public async handlePrivateKeyImport(): Promise<void> {
+    try {
+      await this.importPrivateKey(this.privateKeyModel)
+    } catch (e) {
+      await Notification.error({
+        title: 'Error',
+        message: `${e.message}${JSON.stringify(e)}`,
+      })
+      console.error(e)
+    } finally {
+      this.showImportDialog = false
+      this.privateKeyModel = ''
+    }
+  }
+
+  public get formattedAccounts() {
+    return this.accounts.length > 0
+      ? this.accounts.map(account => ({
+          ...account,
+          popoverOpen: false,
+          password: '',
+          shortenAddress: shortenAddress(account.address),
+        }))
+      : [{ address: '', etherBalance: '', shortenAddress: '' }]
+  }
+}
+</script>
