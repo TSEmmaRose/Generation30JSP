@@ -20,4 +20,23 @@
                     style="width:100%"
                     class="secondaryButton"
                     type="primary"
-                    @
+                    @click="
+                      scope.row.loading = true
+                      handleFunctionCall(
+                        scope.row,
+                        contract.contractInstance,
+                        contract.contractAddress
+                      ).then((res) => {
+                        scope.row.res = res
+                        scope.row.loading = false
+                      })
+                    "
+                  >{{ scope.row.name }}</el-button>
+                </el-col>
+                <el-col v-if="scope.row.inputs.length > 0" :span="scope.row.loading ? 12 : 13">
+                  <el-popover
+                    :content="scope.row.combinedInputs"
+                    :open-delay="200"
+                    placement="bottom-start"
+                    width="50%"
+                    
