@@ -39,4 +39,27 @@
                     :open-delay="200"
                     placement="bottom-start"
                     width="50%"
-                    
+                    trigger="focus"
+                  >
+                    <el-input
+                      slot="reference"
+                      :id="
+                        'deployedContract' + index + scope.row.name + 'input'
+                      "
+                      v-model="scope.row.argsModel"
+                      :placeholder="scope.row.combinedInputs"
+                      clearable
+                    />
+                  </el-popover>
+                </el-col>
+              </el-row>
+              <el-row>
+                <p
+                  v-for="(output, index) in scope.row.outputs"
+                  v-show="scope.row.res"
+                  :key="index"
+                  type="flex"
+                >
+                  {{ index }} : {{ output.type }}:
+                  {{ scope.row.res && scope.row.res[index] }}
+            
