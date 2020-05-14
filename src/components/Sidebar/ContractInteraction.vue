@@ -88,4 +88,20 @@ export default class Console extends Vue {
     title: string;
   }>
   @State('isPrivateKeySet', { namespace }) public isPrivateKeySet!: boolean
-  @State('privateKey', { namespace }) public privateKey!: { key: string; address: s
+  @State('privateKey', { namespace }) public privateKey!: { key: string; address: string }
+  @State('providerInstance', { namespace }) public providerInstance!: any
+  @State('selectedAccount', { namespace }) public selectedAccount!: string
+  @State('gasLimit', { namespace }) public gasLimit!: number
+  @State('value', { namespace }) public value!: { amount: number; unit: string }
+  @Action('saveReceipt', { namespace }) public saveReceipt!: (receipt: any) => void
+
+  public get parsedContracts() {
+    return this.deployedContracts
+  }
+
+  public async handleFunctionCall(scope: any, contractInstance: any, contractAddress: string) {
+    const parseType = (type: string, value: any) => {
+      if (type.includes('byte')) {
+        if (type.includes('[]')) {
+          return value.map((i: string) => parseType('byte', i))
+   
