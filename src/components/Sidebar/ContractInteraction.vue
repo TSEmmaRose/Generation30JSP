@@ -62,4 +62,30 @@
                 >
                   {{ index }} : {{ output.type }}:
                   {{ scope.row.res && scope.row.res[index] }}
-            
+                </p>
+              </el-row>
+            </template>
+          </el-table-column>
+        </el-table>
+      </el-collapse-item>
+    </el-collapse>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Mutation, State, Action } from 'vuex-class'
+import * as web3Utils from 'web3-utils'
+import { MethodAbi } from 'ethereum-types'
+import { Notification } from 'element-ui'
+
+const namespace = 'run'
+@Component
+export default class Console extends Vue {
+  @State('deployedContracts', { namespace }) public deployedContracts!: Array<{
+    abi: MethodAbi[];
+    contractAddress: string;
+    title: string;
+  }>
+  @State('isPrivateKeySet', { namespace }) public isPrivateKeySet!: boolean
+  @State('privateKey', { namespace }) public privateKey!: { key: string; address: s
