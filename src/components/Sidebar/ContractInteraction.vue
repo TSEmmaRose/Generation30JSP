@@ -125,4 +125,27 @@ export default class Console extends Vue {
           this.saveReceipt(txReceipt)
           res = true
         } else {
-          res = await contr
+          res = await contractInstance.methods[scope.name](...data).call({
+            from: this.selectedAccount,
+          })
+          this.saveReceipt({ from: this.selectedAccount, to: contractAddress, data: res })
+          return scope.outputs.length === 1
+            ? [parseType(scope.outputs[0].type, res)]
+            : scope.outputs.map(({ type }: any, index: number) => {
+                return parseType(type, res[index])
+              })
+        }
+      } else {
+        throw new Error('Provider not set')
+      }
+    } catch (e) {
+      await Notification.error({
+        title: 'Error',
+        message: `${e.message}${JSON.stringify(e)}`,
+      })
+      console.error(e)
+    }
+    return null
+  }
+}
+</script>
