@@ -104,4 +104,25 @@ export default class Console extends Vue {
       if (type.includes('byte')) {
         if (type.includes('[]')) {
           return value.map((i: string) => parseType('byte', i))
-   
+        }
+        return web3Utils.toUtf8(value)
+      }
+      return value
+    }
+
+    try {
+      if (this.providerInstance) {
+        const data = [...JSON.parse(`[${scope.argsModel}]`)].map(i => `${i}`)
+        let res: any
+        if (scope.outputs.length < 1) {
+          const txReceipt = await this.providerInstance.executeContractFunction({
+            func: contractInstance.methods[scope.name](...data),
+            from: this.selectedAccount,
+            gas: this.gasLimit,
+            value: web3Utils.fromWei(`${this.value.amount}`, 'ether'), // TODO check unit,
+            privateKey: this.isPrivateKeySet ? this.privateKey.key : undefined,
+          })
+          this.saveReceipt(txReceipt)
+          res = true
+        } else {
+          res = await contr
