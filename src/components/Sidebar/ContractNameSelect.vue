@@ -17,4 +17,20 @@ export default class ContractNameSelect extends Vue {
     @Mutation('setSelectedContract', { namespace }) public setSelectedContract!: (contractName: string) => void
 
     public set selectedContractModel(contractName: string) {
-        this.s
+        this.setSelectedContract(contractName)
+    }
+    public get selectedContractModel(): string {
+        return this.selectedContract
+    }
+}
+</script>
+
+<style lang="stylus" scoped>
+.el-row {
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+</style>
