@@ -285,3 +285,146 @@ export default class Run extends Vue {
   @Action('retrieveContractFromAddress', { namespace }) public retrieveContractFromAddress!: (address: string) => void
 
   public fromAddressModel: string = ''
+  public compileLoading: boolean = false
+  public deployLoading: boolean = false
+  public retrieveContractFromAddressLoading: boolean = false
+
+  public async getAccounts(): Promise<void> {
+    try {
+      await this.fetchAccounts()
+    } catch (e) {
+      await Notification.error({
+        title: 'Error',
+        message: `${e.message}${JSON.stringify(e)}`,
+      })
+      console.error(e)
+    }
+  }
+  public async handleCompile(): Promise<void> {
+    this.compileLoading = true
+    try {
+      await this.compile()
+    } catch (e) {
+      await Notification.error({
+        title: 'Error',
+        message: `${e.message}${JSON.stringify(e)}`,
+      })
+      console.error(e)
+    } finally {
+      this.compileLoading = false
+    }
+  }
+  public async handleDeploy(): Promise<void> {
+    if (!this.providerInstance) {
+      await Notification.error({
+        title: 'Error',
+        message: 'Provider not set',
+      })
+    }
+
+    const deploy = async () => {
+      try {
+        this.deployLoading = true
+        await this.deploy()
+        // setTimeout(() => {this.deployLoading = false}, 45e3)
+        await Notification.success({
+          title: 'Success',
+          message: `Contract deployed at ${this.getLatestContractAddress}`,
+        })
+      } catch (e) {
+        await Notification.error({
+          title: 'Error',
+          message: `${e.message}${JSON.stringify(e)}`,
+        })
+        console.error(e)
+      } finally {
+        this.deployLoading = false
+      }
+    }
+
+    if (await this.providerInstance.isMainnet()) {
+      this.$confirm('You are trying to deploy to Mainnet. Continue?', 'Warning', {
+        // TODO color
+        confirmButtonText: 'OK',
+        cancelButtonText: 'Cancel',
+        type: 'warning',
+        cancelButtonClass: 'secondaryButton',
+      })
+        .then(() => {
+          deploy()
+        })
+        .catch(e => {})
+    } else {
+      deploy()
+    }
+  }
+  public async handleRetrieveContractFromAddress(): Promise<void> {
+    this.retrieveContractFromAddressLoading = true
+    try {
+      await this.retrieveContractFromAddress(this.fromAddressModel)
+    } catch (e) {
+      await Notification.error({
+        title: 'Error',
+        message: `${e.message}${JSON.stringify(e)}`,
+      })
+      console.error(e)
+    } finally {
+      this.retrieveContractFromAddressLoading = false
+    }
+  }
+
+  public set selectedAccountModel(account: string) {
+    this.saveSelectAccount(account)
+  }
+  public get selectedAccountModel(): string {
+    return this.selectedAccount
+  }
+  public set gasLimitModel(gasLimit: number) {
+    this.saveGasLimit(gasLimit)
+  }
+  public get gasLimitModel(): number {
+    return this.gasLimit
+  }
+  public set gasPriceModel(gasPrice: number) {
+    this.saveGasPrice(gasPrice)
+  }
+  public get gasPriceModel(): number {
+    return this.gasPrice
+  }
+  public set amountModel(amount: number) {
+    this.saveValue({ amount })
+  }
+  public get amountModel(): number {
+    return this.value.amount
+  }
+  public set unitModel(unit: string) {
+    this.saveValue({ unit })
+  }
+  public get unitModel(): string {
+    return this.value.unit
+  }
+  public set contractArgsModel(contractArgs: string) {
+    this.setContractArgs(contractArgs)
+  }
+  public get contractArgsModel(): string {
+    return this.contractArgs
+  }
+  public get constructorArgs() {
+    return this.parsedContractConstructor()
+  }
+
+  public stopDeploying(): void {
+    this.deployLoading = false
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+.el-row {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+</style>
