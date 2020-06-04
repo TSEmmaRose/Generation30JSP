@@ -34,4 +34,29 @@ const runState: RunState = {
   providerInstance: devProviderInstance,
   isProviderSet,
   privateKey: undefined,
- 
+  isPrivateKeySet: false,
+}
+
+const runGetters: GetterTree<RunState, RootState> = {
+  accounts(state): any {
+    const units = getUnits(state.selectedBlockchain)
+    return state.accounts.length > 0
+      ? state.accounts.map(({ address, etherBalance }) => {
+          const label = `${shortenAddress(address)}${
+            etherBalance ? ' (' + etherBalance.toString() + ` ${units[units.length - 1].value})` : ''
+          }`
+          return {
+            label,
+            value: address,
+          }
+        })
+      : [{ label: 'No Accounts Available', value: '' }]
+  },
+  getLatestContractAddress(state) {
+    return state.receipts.length > 0 && state.receipts[state.receipts.length - 1].address
+  },
+  getUnits(state) {
+    return getUnits(state.selectedBlockchain)
+  },
+  showUnlockButtons(state) {
+    if (
