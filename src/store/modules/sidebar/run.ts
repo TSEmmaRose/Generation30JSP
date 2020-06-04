@@ -59,4 +59,30 @@ const runGetters: GetterTree<RunState, RootState> = {
     return getUnits(state.selectedBlockchain)
   },
   showUnlockButtons(state) {
-    if (
+    if (state.selectedBlockchain === state.blockchains.AION) {
+      if (state.isPrivateKeySet === false) {
+        if (state.selectedProvider !== state.providers.InjectedWeb3) {
+          return true
+        }
+      }
+    }
+    return false
+  },
+  providerAddressStatus(state) {
+    return state.isProviderSet && state.selectedProvider === state.providers.Web3Provider
+      ? state.providerAddress
+      : state.selectedProvider === state.providers.InjectedWeb3
+      ? 'Using Injected Web3'
+      : false
+  },
+}
+
+export interface SaveValue {
+  amount?: number
+  unit?: string
+}
+const runMutations: MutationTree<RunState> = {
+  setBlockchain(state, payload) {
+    state.selectedBlockchain = payload
+    state.value.unit = ''
+    if (state.isProviderSet) 
