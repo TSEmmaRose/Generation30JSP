@@ -143,4 +143,23 @@ const runMutations: MutationTree<RunState> = {
     state.gasPrice = payload
   },
   saveValue(state, payload: SaveValue) {
-    state.value = { ...state.va
+    state.value = { ...state.value, ...payload }
+  },
+  setContractArgs(state, contractArgs: string) {
+    state.contractArgs = contractArgs
+  },
+  saveDeployedContract(state, payload) {
+    state.deployedContracts.push(payload)
+  },
+  updateAccountStatus(state, { address, status }) {
+    const targetAccountIndex = state.accounts.findIndex(account => account.address === address)
+    state.accounts[targetAccountIndex].unlocked = status
+  },
+  toggleAccountLoadingStatus(state, address) {
+    const targetAccountIndex = state.accounts.findIndex(account => account.address === address)
+    state.accounts[targetAccountIndex].loading = !state.accounts[targetAccountIndex].loading
+  },
+  toggleAccountsLoading(state) {
+    state.accountsLoading = !state.accountsLoading
+  },
+  saveNewReceipt(state, payload) {
