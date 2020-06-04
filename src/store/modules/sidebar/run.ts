@@ -113,4 +113,34 @@ const runMutations: MutationTree<RunState> = {
     }
   },
   setPrivateKey(state, { key, address }) {
-    state.privateKey = { key, addre
+    state.privateKey = { key, address }
+    state.isPrivateKeySet = true
+  },
+
+  unsetPrivateKey(state) {
+    state.privateKey = undefined
+    state.isPrivateKeySet = false
+    state.selectedAccount = ''
+    state.accounts = []
+    if (process.env.NODE_ENV === 'production') {
+      event('user-click', 'unsetPK', 'unsetPK', true)
+    }
+  },
+  setProviderInstance(state, payload) {
+    state.providerInstance = payload
+    state.isProviderSet = payload ? true : false
+  },
+  saveAccounts(state, payload) {
+    state.accounts = payload
+  },
+  saveSelectAccount(state, payload) {
+    state.selectedAccount = payload
+  },
+  saveGasLimit(state, payload) {
+    state.gasLimit = payload
+  },
+  saveGasPrice(state, payload) {
+    state.gasPrice = payload
+  },
+  saveValue(state, payload: SaveValue) {
+    state.value = { ...state.va
