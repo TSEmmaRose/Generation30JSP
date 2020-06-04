@@ -85,4 +85,32 @@ const runMutations: MutationTree<RunState> = {
   setBlockchain(state, payload) {
     state.selectedBlockchain = payload
     state.value.unit = ''
-    if (state.isProviderSet) 
+    if (state.isProviderSet) {
+      state.isProviderSet = false
+      state.providerInstance = undefined
+      state.privateKey = undefined
+      state.selectedAccount = ''
+      state.accounts = []
+      state.isPrivateKeySet = false
+    }
+  },
+  setProvider(state, payload) {
+    state.selectedProvider = payload
+    if (state.isProviderSet) {
+      state.isProviderSet = false
+      state.providerInstance = undefined
+      state.selectedAccount = ''
+      state.accounts = []
+    }
+  },
+  setProviderAddress(state, payload) {
+    state.providerAddress = payload
+    if (state.isProviderSet) {
+      state.isProviderSet = false
+      state.providerInstance = undefined
+      state.selectedAccount = ''
+      state.accounts = []
+    }
+  },
+  setPrivateKey(state, { key, address }) {
+    state.privateKey = { key, addre
