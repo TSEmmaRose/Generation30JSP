@@ -163,3 +163,23 @@ const runMutations: MutationTree<RunState> = {
     state.accountsLoading = !state.accountsLoading
   },
   saveNewReceipt(state, payload) {
+    state.receipts.push(payload)
+  },
+}
+
+const runActions: ActionTree<RunState, RootState> = {
+  async instantiateProvider({ state, commit }) {
+    switch (state.selectedBlockchain) {
+      case state.blockchains.AION:
+        switch (state.selectedProvider) {
+          case state.providers.Web3Provider:
+            commit('setProviderInstance', new Aion(state.providerAddress))
+            break
+          case state.providers.InjectedWeb3:
+            if (process.env.NODE_ENV !== 'production') {
+              console.log((window as any).aionweb3)
+            }
+            if (!('aionweb3' in window)) {
+              throw new Error('No Injected Web3 was detected. Please Download Aiwa from ;http://getaiwa.com')
+            }
+            commit('setProviderInstance', new Aion('', tr
