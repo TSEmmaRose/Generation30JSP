@@ -201,4 +201,27 @@ const runActions: ActionTree<RunState, RootState> = {
             if (!('web3' in window)) {
               throw new Error('No Injected Web3 was detected. Please Download Metamask from ;https://metamask.io')
             }
-            commit('s
+            commit('setProviderInstance', new Ethereum('', true, (window as any).web3))
+            break
+          default:
+            commit('setProviderInstance', undefined)
+            break
+        }
+        break
+      default:
+        commit('setProviderInstance', undefined)
+        break
+    }
+  },
+  async deploy({ state, rootState, commit, dispatch }) {
+    const providerInstance = state.providerInstance
+    if (!providerInstance) {
+      throw new Error('Provider not set')
+    }
+    const contractName = rootState.compile.selectedContract
+    const compiledCode = rootState.compile.compiledCode
+    const useInBrowserCompiler = rootState.compile.useInBrowserCompiler
+    const from = state.selectedAccount
+    const gas = state.gasLimit
+    const gasPrice = state.gasPrice
+    const code = useInBrowserCompiler ? '0x' + compile
