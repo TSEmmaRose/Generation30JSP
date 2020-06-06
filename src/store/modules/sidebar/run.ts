@@ -182,4 +182,23 @@ const runActions: ActionTree<RunState, RootState> = {
             if (!('aionweb3' in window)) {
               throw new Error('No Injected Web3 was detected. Please Download Aiwa from ;http://getaiwa.com')
             }
-            commit('setProviderInstance', new Aion('', tr
+            commit('setProviderInstance', new Aion('', true, (window as any).aionweb3))
+            break
+          default:
+            commit('setProviderInstance', undefined)
+            break
+        }
+        break
+      case state.blockchains.ETHEREUM:
+        switch (state.selectedProvider) {
+          case state.providers.Web3Provider:
+            commit('setProviderInstance', new Ethereum(state.providerAddress))
+            break
+          case state.providers.InjectedWeb3:
+            if (process.env.NODE_ENV !== 'production') {
+              console.log((window as any).web3)
+            }
+            if (!('web3' in window)) {
+              throw new Error('No Injected Web3 was detected. Please Download Metamask from ;https://metamask.io')
+            }
+            commit('s
