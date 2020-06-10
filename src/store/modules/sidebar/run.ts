@@ -224,4 +224,25 @@ const runActions: ActionTree<RunState, RootState> = {
     const from = state.selectedAccount
     const gas = state.gasLimit
     const gasPrice = state.gasPrice
-    const code = useInBrowserCompiler ? '0x' + compile
+    const code = useInBrowserCompiler ? '0x' + compiledCode[contractName].bytecode : compiledCode[contractName].code
+    const abi = useInBrowserCompiler
+      ? JSON.parse(compiledCode[contractName].interface)
+      : compiledCode[contractName].info.abiDefinition
+    const contractArgs = rootState.compile.contracts[contractName] // TODO check constructor
+      ? state.contractArgs
+      : ''
+    const args: any[] = [...JSON.parse(`[${contractArgs}]`)]
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('deploying with', {
+        abi,
+        code,
+        from: state.isPrivateKeySet ? state.privateKey!.address : from,
+        gas,
+        gasPrice,
+        args,
+        privateKey: state.isPrivateKeySet ? state.privateKey!.key : undefined,
+      })
+    }
+    const { txReceipt, txHash } = await providerInstance.deploy({
+      abi,
+ 
