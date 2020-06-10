@@ -245,4 +245,24 @@ const runActions: ActionTree<RunState, RootState> = {
     }
     const { txReceipt, txHash } = await providerInstance.deploy({
       abi,
- 
+      code,
+      from: state.isPrivateKeySet ? state.privateKey!.address : from,
+      gas,
+      gasPrice,
+      args,
+      privateKey: state.isPrivateKeySet ? state.privateKey!.key : undefined,
+    })
+    if (process.env.NODE_ENV !== 'production') {
+      console.log({ txReceipt, txHash })
+    }
+    if (process.env.NODE_ENV === 'production') {
+      event('user-click', 'Deploy', 'Deploy', true)
+    }
+    if (txReceipt && txReceipt.contractAddress) {
+      commit('saveDeployedContract', {
+        ...parseDeployedContract(contractName, txReceipt.contractAddress, abi),
+        contractInstance: providerInstance.getContract(abi, txReceipt.contractAddress),
+      })
+      dispatch('saveReceipt', txReceipt)
+    } else {
+      throw new Error('F
