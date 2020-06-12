@@ -265,4 +265,21 @@ const runActions: ActionTree<RunState, RootState> = {
       })
       dispatch('saveReceipt', txReceipt)
     } else {
-      throw new Error('F
+      throw new Error('Failed to fetch receipt.')
+    }
+  },
+  async retrieveContractFromAddress({ state, rootState, commit, rootGetters, dispatch }, address) {
+    const providerInstance = state.providerInstance
+    if (!providerInstance) {
+      throw new Error('Provider not set')
+    }
+    const contractName = rootState.compile.selectedContract
+    const compiledCode = rootState.compile.compiledCode
+    const useInBrowserCompiler = rootState.compile.useInBrowserCompiler
+    if (contractName in compiledCode) {
+      const abi = useInBrowserCompiler
+        ? JSON.parse(compiledCode[contractName].interface)
+        : compiledCode[contractName].info.abiDefinition
+      commit('saveDeployedContract', {
+        ...parseDeployedContract(contractName, address, abi),
+        contractInstance: providerInstance.
