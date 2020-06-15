@@ -19,4 +19,46 @@ body {
 }
 
 /* override codemirror*/
-.Code
+.CodeMirror {
+  border: none;
+  /* min-height: 30vh; */
+  height: auto;
+  /* max-height: 70vh; */
+}
+.CodeMirror-hscrollbar {
+  overflow-x: auto;
+}
+
+.cm-s-monokai .CodeMirror-gutters,
+.cm-s-monokai.CodeMirror {
+  background-color: #252525;
+  /* background-color: #2b2b2b; */
+}
+
+/* override elementui*/
+
+.el-collapse-item__header,
+.el-input,
+.el-select,
+.el-input__inner,
+.el-tabs,
+.el-select-dropdown,
+.tabContainer,
+.fileExplorerContainer,
+.el-container,
+.el-tree,
+.el-popover,
+.el-popper,
+.el-table,
+.el-dialog,
+.el-table tr,
+.el-table th,
+.el-table__expanded-cell,
+.el-table--enable-row-hover .el-table__body tr:hover > td,
+.el-tabs--border-card > .el-tabs__header,
+.el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active {
+  color: #ffab00;
+  background-color: #252525;
+}
+/* Secondary button */
+.secondaryButto
