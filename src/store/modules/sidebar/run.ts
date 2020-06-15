@@ -344,4 +344,34 @@ const runActions: ActionTree<RunState, RootState> = {
     const data = Object.keys(payload).map((j: any) => {
       return {
         key: j,
-        value: payload[j
+        value: payload[j],
+      }
+    })
+    commit('saveNewReceipt', {
+      title,
+      address,
+      data,
+    })
+    if (process.env.NODE_ENV === 'production') {
+      event('response', 'Save Receipt', 'Save Receipt', true)
+    }
+  },
+  async importPrivateKey({ state, commit, dispatch }, key) {
+    const providerInstance = state.providerInstance
+    if (!providerInstance) {
+      throw new Error('Provider not set')
+    }
+    const { address } = await providerInstance.web3.eth.accounts.privateKeyToAccount(key)
+    commit('setPrivateKey', { key, address })
+    commit('saveSelectAccount', address)
+    dispatch('fetchAccounts')
+    if (process.env.NODE_ENV === 'production') {
+      event('user-click', 'Import private key', 'Import private key', true)
+    }
+  },
+}
+
+export default {
+  namespaced: true,
+  state: runState,
+ 
