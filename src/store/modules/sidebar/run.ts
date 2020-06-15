@@ -304,4 +304,24 @@ const runActions: ActionTree<RunState, RootState> = {
         const etherBalance = await providerInstance.getBalance(address)
         accounts = [{ address, etherBalance, unlocked: false, loading: false }]
       } else {
-        const res = await providerInstance.getBal
+        const res = await providerInstance.getBalancesWithAccounts()
+        accounts = res.map(acc => {
+          return { ...acc, unlocked: false, loading: false }
+        })
+      }
+      commit('saveAccounts', accounts)
+      if (process.env.NODE_ENV === 'production') {
+        event('user-click', 'Fetch Accounts', 'Fetch Accounts', true)
+      }
+    } catch (e) {
+      throw e
+    } finally {
+      commit('toggleAccountsLoading')
+    }
+  },
+  async unlockAccount({ state, commit }, { address, password }) {
+    commit('toggleAccountLoadingStatus', address)
+    const providerInstance = state.providerInstance
+    if (providerInstance && 'unlock' in providerInstance) {
+      const status = await providerInstance.unlock(address, password)
+      commit('u
