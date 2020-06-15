@@ -61,4 +61,43 @@ body {
   background-color: #252525;
 }
 /* Secondary button */
-.secondaryButto
+.secondaryButton {
+  color: #ffab00 !important;
+  background-color: #252525;
+  border-color: #ffab00c9;
+}
+.secondaryButton:hover {
+  color: #bab1a2 !important;
+  background-color: #242426 !important;
+}
+.secondaryButton:focus {
+  color: #bab1a2 !important;
+  background-color: #242426 !important;
+}
+/* dialog */
+.el-dialog__header,
+.el-dialog__body,
+.el-dialog__title,
+.el-form-item__label {
+  color: #ffab00;
+  border-color: #ffab00c9;
+}
+/* message box */
+.el-message-box,
+.el-message-box__content,
+.el-message-box__title {
+  color: #ffab00;
+  background-color: #252525;
+  border-color: #545050;
+}
+
+/* table & el collapse */
+.el-table th.is-leaf,
+.el-table td,
+.el-collapse-item__header,
+.el-collapse,
+.el-collapse-item__wrap {
+  border-bottom: 1px solid #505050;
+}
+.el-collapse {
+  border-top: 1px solid #5
