@@ -282,4 +282,26 @@ const runActions: ActionTree<RunState, RootState> = {
         : compiledCode[contractName].info.abiDefinition
       commit('saveDeployedContract', {
         ...parseDeployedContract(contractName, address, abi),
-        contractInstance: providerInstance.
+        contractInstance: providerInstance.getContract(abi, address),
+      })
+      if (process.env.NODE_ENV === 'production') {
+        event('response', 'Retrieve Contract', 'Retrieve Contract', true)
+      }
+    } else {
+      throw new Error('Invalid Abi')
+    }
+  },
+  async fetchAccounts({ commit, state }) {
+    const providerInstance = state.providerInstance
+    if (!providerInstance) {
+      throw new Error('Provider not set')
+    }
+    commit('toggleAccountsLoading')
+    try {
+      let accounts: Account[]
+      if (state.isPrivateKeySet) {
+        const address = state.privateKey!.address
+        const etherBalance = await providerInstance.getBalance(address)
+        accounts = [{ address, etherBalance, unlocked: false, loading: false }]
+      } else {
+        const res = await providerInstance.getBal
