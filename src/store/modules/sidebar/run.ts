@@ -324,4 +324,24 @@ const runActions: ActionTree<RunState, RootState> = {
     const providerInstance = state.providerInstance
     if (providerInstance && 'unlock' in providerInstance) {
       const status = await providerInstance.unlock(address, password)
-      commit('u
+      commit('updateAccountStatus', { address, status })
+      commit('toggleAccountLoadingStatus', address)
+      if (process.env.NODE_ENV === 'production') {
+        event('user-click', 'Unlock Account', 'Unlock Account', true)
+      }
+      if (!status) {
+        throw new Error('Unlock failed')
+      }
+    } else {
+      throw new Error('Provider not set')
+    }
+  },
+  async saveReceipt({ commit }, payload) {
+    const address = payload.contractAddress || payload.transactionHash || payload.to
+    const title = `${
+      payload.contractAddress ? 'Contract: ' : payload.transactionHash ? 'Tx Hash: ' : 'Call: '
+    } ${shortenAddress(address)}`
+    const data = Object.keys(payload).map((j: any) => {
+      return {
+        key: j,
+        value: payload[j
