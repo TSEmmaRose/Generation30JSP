@@ -1,0 +1,22 @@
+* {
+  font-size: 13px !important;
+}
+body {
+  background-color: #252525;
+  /* font: 12px / normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas',
+  'source-code-pro', monospace; */
+  font-family: Arial, Helvetica, sans-serif;
+  height: 99vh;
+  overflow-y: hidden;
+  margin: 0;
+}
+.textColorBlack {
+  color: #252525;
+}
+.el-collapse-item__content {
+  color: #ffab00;
+  background-color: #252525;
+}
+
+/* override codemirror*/
+.Code

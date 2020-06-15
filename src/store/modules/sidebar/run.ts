@@ -374,4 +374,7 @@ const runActions: ActionTree<RunState, RootState> = {
 export default {
   namespaced: true,
   state: runState,
- 
+  getters: runGetters,
+  mutations: runMutations,
+  actions: runActions,
+}
