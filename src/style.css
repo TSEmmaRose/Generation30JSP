@@ -184,4 +184,44 @@ body {
 .el-button--primary:hover,
 .el-button--primary:focus {
   background: #daa639;
-  border-color
+  border-color: #ffab00;
+  color: #303133;
+}
+/* dropdown color */
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  background-color: #555555;
+  color: #ffab00;
+}
+/* tabs */
+.el-tabs__item {
+  color: white;
+  font-size: 12px;
+}
+/* sidebar dragger */
+.tabContainer > div.handle.handle-ml {
+  background-color: transparent;
+  height: 100%;
+  width: 2.4px;
+  top: 0px;
+  margin-top: 0;
+  left: -6px;
+  display: block !important;
+}
+.tabContainer > div.handle.handle-ml:hover {
+  background-color: #ffab00;
+  height: 100%;
+  width: 5px;
+  top: 0px;
+  margin-top: 0;
+  left: -6px;
+  display: block;
+}
+/* fileExplorer dragger */
+.fileExplorerContainer > div.handle.handle-mr {
+  background-color: transparent;
+  height: 100%;
+  width: 2.4px;
+  top: 0px;
+  right: -6px;
+  display: b
