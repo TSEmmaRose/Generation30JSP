@@ -144,4 +144,44 @@ body {
 .el-tabs--border-card > .el-tabs__header {
   border-bottom: 1px solid #ffab00;
 }
-.el-tabs--border
+.el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active {
+  border: 1px solid #ffab00;
+  border-bottom: none;
+}
+.el-tabs__new-tab {
+  display: none;
+}
+.el-tabs__nav {
+  margin-top: 1px;
+}
+.el-tabs__nav:first-child {
+  margin-left: 0.5px;
+}
+/*input borders */
+.el-input__inner {
+  border: 1px solid #5f6268cc;
+}
+/* .el-button, */
+.el-button.is-loading {
+  color: #ffab00;
+  background: #ffab00;
+  background-color: #252525;
+
+  /* rest props are overridden by scss file */
+}
+.el-button.is-loading:before {
+  background-color: transparent;
+}
+.el-button--primary {
+  color: #252525;
+}
+.iconButton:hover {
+  cursor: pointer;
+}
+.el-button--mini.is-circle {
+  padding: 5px;
+}
+.el-button--primary:hover,
+.el-button--primary:focus {
+  background: #daa639;
+  border-color
