@@ -100,4 +100,48 @@ body {
   border-bottom: 1px solid #505050;
 }
 .el-collapse {
-  border-top: 1px solid #5
+  border-top: 1px solid #505050;
+}
+.el-table::before {
+  background-color: #505050;
+}
+.el-collapse-item__wrap {
+  background-color: transparent;
+}
+.el-collapse-item__header {
+  overflow: hidden;
+}
+/* tree */
+.el-tree-node__content {
+  padding-bottom: 1rem;
+}
+.el-tree-node {
+  height: 3rem;
+}
+.el-tree-node:focus > .el-tree-node__content {
+  background-color: #2f2f2d;
+}
+.el-tree-node__content:hover {
+  background-color: #3f3f3f;
+}
+.el-tabs__new-tab {
+  background-color: #ffab00;
+  color: #252525;
+  border: none;
+}
+.el-tabs__new-tab:hover {
+  color: white;
+  background-color: #252525;
+  border: 1px solid #ffab00;
+}
+.el-tabs--border-card > .el-tabs__content {
+  padding: 0px;
+}
+/* tabs */
+.el-tabs--border-card {
+  border: 1px solid #5f6268cc;
+}
+.el-tabs--border-card > .el-tabs__header {
+  border-bottom: 1px solid #ffab00;
+}
+.el-tabs--border
