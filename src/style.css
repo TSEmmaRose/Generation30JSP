@@ -260,4 +260,42 @@ body {
   background-position: center 15%;
   background-size: auto calc(75% - 1.7em);
 } */
-/* custo
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffab00;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ad7b16;
+}
+@-webkit-keyframes titan-mine {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(55deg);
+    transform: rotate(55deg);
+  }
+}
+@keyframes titan-mine {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(55deg);
+    transform: rotate(55deg);
+  }
+}
