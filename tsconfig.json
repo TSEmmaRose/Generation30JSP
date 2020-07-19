@@ -12,4 +12,18 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": ["webpack-env", "jest"],
-    "lib": ["esnext", "dom", 
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  // "file": ["src/types/*.d.ts"],
+  "typeAcquisition": {
+    "enable": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+    // "tests/**/*.ts",
+    // "tests/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "tests/**/*.ts", "tests/**/*.tsx"]
+}
