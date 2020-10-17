@@ -751,4 +751,21 @@
   resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.3.0.tgz#390dc0ea20a477c9cc09d3a0541f673c0beedb4f"
   integrity sha512-ZnuzErAub1hiFp9c/BI94JMEG7AcbS3/nqToJofOYJFspwWerozxefHF3i3owy6KymBQODVetdyI+iZu80b23A==
   dependencies:
-    "@babel/plugin-proposal-class-proper
+    "@babel/plugin-proposal-class-properties" "^7.0.0"
+    "@babel/plugin-proposal-decorators" "^7.1.0"
+    "@babel/plugin-syntax-dynamic-import" "^7.0.0"
+    "@babel/plugin-syntax-jsx" "^7.0.0"
+    "@babel/plugin-transform-runtime" "^7.0.0"
+    "@babel/preset-env" "^7.0.0"
+    "@babel/runtime" "^7.0.0"
+    "@babel/runtime-corejs2" "^7.2.0"
+    "@vue/babel-preset-jsx" "^1.0.0-beta.1"
+    babel-helper-vue-jsx-merge-props "^2.0.3"
+    babel-plugin-dynamic-import-node "^2.2.0"
+    babel-plugin-transform-vue-jsx "^4.0.1"
+    core-js "^2.6.1"
+
+"@vue/babel-preset-jsx@^1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/babel-preset-jsx/-/babel-preset-jsx-1.0.0-beta.1.tgz#3af92fdc90387851ef7873525d081d193fac2140"
+  integr
