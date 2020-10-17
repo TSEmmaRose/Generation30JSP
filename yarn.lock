@@ -768,4 +768,17 @@
 "@vue/babel-preset-jsx@^1.0.0-beta.1":
   version "1.0.0-beta.1"
   resolved "https://registry.yarnpkg.com/@vue/babel-preset-jsx/-/babel-preset-jsx-1.0.0-beta.1.tgz#3af92fdc90387851ef7873525d081d193fac2140"
-  integr
+  integrity sha512-Nx6+KEJKApsofsYElwFaU7bnBWjMatAgUBFR45qMNl2KpwVOrgNABCbrX/9IqxZIOGCpRuzD96pWmnxFnu2HVQ==
+  dependencies:
+    "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0-beta.1"
+    "@vue/babel-plugin-transform-vue-jsx" "^1.0.0-beta.1"
+    "@vue/babel-sugar-functional-vue" "^1.0.0-beta.1"
+    "@vue/babel-sugar-inject-h" "^1.0.0-beta.1"
+    "@vue/babel-sugar-v-model" "^1.0.0-beta.1"
+    "@vue/babel-sugar-v-on" "^1.0.0-beta.1"
+
+"@vue/babel-sugar-functional-vue@^1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/babel-sugar-functional-vue/-/babel-sugar-functional-vue-1.0.0-beta.1.tgz#9b883d7564c358fda938670cffd4603d5a86bded"
+  integrity sha512-FD53t0SxlkNtCk78C/fl1WR79tOLYMOEcku0ie0nKhjn/gy56fhYOMlUjutjE/mdVa4wHSHnz2WC7N8e4zbxPg==
+  de
