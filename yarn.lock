@@ -736,4 +736,19 @@
 
 "@vue/babel-plugin-transform-vue-jsx@^1.0.0-beta.1":
   version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@vue/babel-plu
+  resolved "https://registry.yarnpkg.com/@vue/babel-plugin-transform-vue-jsx/-/babel-plugin-transform-vue-jsx-1.0.0-beta.1.tgz#ac1e8577eb6138a6f15025a0b2639cf9accd7b43"
+  integrity sha512-/ZV09X4BtA5OPdnQqQaxhD1aRBQF8PVY/ZUnQtrk4jld7+Mfy9CxT4gCznoJ+KFooCbyjvwhotB72Hg7N3T4zg==
+  dependencies:
+    "@babel/helper-module-imports" "^7.0.0"
+    "@babel/plugin-syntax-jsx" "^7.2.0"
+    "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0-beta.1"
+    html-tags "^2.0.0"
+    lodash.kebabcase "^4.1.1"
+    svg-tags "^1.0.0"
+
+"@vue/babel-preset-app@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.3.0.tgz#390dc0ea20a477c9cc09d3a0541f673c0beedb4f"
+  integrity sha512-ZnuzErAub1hiFp9c/BI94JMEG7AcbS3/nqToJofOYJFspwWerozxefHF3i3owy6KymBQODVetdyI+iZu80b23A==
+  dependencies:
+    "@babel/plugin-proposal-class-proper
