@@ -781,4 +781,19 @@
   version "1.0.0-beta.1"
   resolved "https://registry.yarnpkg.com/@vue/babel-sugar-functional-vue/-/babel-sugar-functional-vue-1.0.0-beta.1.tgz#9b883d7564c358fda938670cffd4603d5a86bded"
   integrity sha512-FD53t0SxlkNtCk78C/fl1WR79tOLYMOEcku0ie0nKhjn/gy56fhYOMlUjutjE/mdVa4wHSHnz2WC7N8e4zbxPg==
-  de
+  dependencies:
+    "@babel/plugin-syntax-jsx" "^7.2.0"
+
+"@vue/babel-sugar-inject-h@^1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/babel-sugar-inject-h/-/babel-sugar-inject-h-1.0.0-beta.1.tgz#89d56355aa69cc6074e6d28f311566cdb8522ba2"
+  integrity sha512-/0Key+jZfxjRb1b7NPS29rrYzPXGqoYxRim54eVFzcAF255O5DCcBDbePGb/ktza2aA8ZvzPfnc/uNxcLA82FQ==
+  dependencies:
+    "@babel/plugin-syntax-jsx" "^7.2.0"
+
+"@vue/babel-sugar-v-model@^1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/babel-sugar-v-model/-/babel-sugar-v-model-1.0.0-beta.1.tgz#f52a67bfe235f34478fc5804453415231fb0d213"
+  integrity sha512-TLcBppivEHL9oeAafLfxBG3M4FFnVp1BX8joBJwvfgMOFgarNux8QhttbqQSMAAVX4j6GOf1xlXpXK2odQHB0w==
+  dependencies:
+    
