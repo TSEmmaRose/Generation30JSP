@@ -796,4 +796,22 @@
   resolved "https://registry.yarnpkg.com/@vue/babel-sugar-v-model/-/babel-sugar-v-model-1.0.0-beta.1.tgz#f52a67bfe235f34478fc5804453415231fb0d213"
   integrity sha512-TLcBppivEHL9oeAafLfxBG3M4FFnVp1BX8joBJwvfgMOFgarNux8QhttbqQSMAAVX4j6GOf1xlXpXK2odQHB0w==
   dependencies:
-    
+    "@babel/plugin-syntax-jsx" "^7.2.0"
+    "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0-beta.1"
+    "@vue/babel-plugin-transform-vue-jsx" "^1.0.0-beta.1"
+    camelcase "^5.0.0"
+    html-tags "^2.0.0"
+    svg-tags "^1.0.0"
+
+"@vue/babel-sugar-v-on@^1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/babel-sugar-v-on/-/babel-sugar-v-on-1.0.0-beta.1.tgz#2c98417ac625bbf1bad11fc3e103b7b6558fcb0e"
+  integrity sha512-K+QecqeKZseWoGkxMAuV08XqumPqBpQ681NwFsSZyj6Pfz5XpEPPlCH3nQ+7KC4yxjbH9bjIGVtkpvbONIfbvA==
+  dependencies:
+    "@babel/plugin-syntax-jsx" "^7.2.0"
+    "@vue/babel-plugin-transform-vue-jsx" "^1.0.0-beta.1"
+    camelcase "^5.0.0"
+
+"@vue/cli-overlay@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.
