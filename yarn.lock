@@ -848,4 +848,22 @@
 
 "@vue/cli-plugin-typescript@^3.2.0":
   version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-typescript/-/cli-plugin-typescript-3.3.0.tgz#a278010e0959e
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-typescript/-/cli-plugin-typescript-3.3.0.tgz#a278010e0959ea9be44b23dfdf65d3c3e01c66a9"
+  integrity sha512-JZ+RYMXL27zq3hU/RnJJaVb6OvsQ5M7qTfZEBWnc45oyw/nFBRLkmFYgQztktvxXvlLcTkJeb8I2cTwxZ2BxnA==
+  dependencies:
+    "@types/webpack-env" "^1.13.6"
+    "@vue/cli-shared-utils" "^3.3.0"
+    fork-ts-checker-webpack-plugin "^0.5.2"
+    globby "^8.0.1"
+    ts-loader "^5.3.2"
+    tslint "^5.12.0"
+
+"@vue/cli-plugin-unit-jest@^3.2.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-3.3.0.tgz#570e41a9e84995f2ad8581f274db8b670c829e11"
+  integrity sha512-Y/WkrO95vdvjVjeNO1vZRQUAxlZ6ngdgAzvMzCeEaujbRG4b8M6W7ePSAe8C9yfoVcJtbnoHcBv2er31sPwtyQ==
+  dependencies:
+    "@vue/cli-shared-utils" "^3.3.0"
+    babel-jest "^23.6.0"
+    babel-plugin-transform-es2015-modules-commonjs "^6.26.2"
+    jest "^23.6.0
