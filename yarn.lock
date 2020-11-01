@@ -814,4 +814,18 @@
 
 "@vue/cli-overlay@^3.3.0":
   version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.
+  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.3.0.tgz#286fe26509a949aeadaa45c87648b76c99c52fd2"
+  integrity sha512-UyfeuX6txu8sRtfhJOJlPgETzU3KjshKY2qAnC34KJKcS+7oIYRpeOo8jMMLjImVE0g6d8Rn3A1GkXjRiKWW6w==
+
+"@vue/cli-plugin-babel@^3.2.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.3.0.tgz#5dea0b90b1ce0dc0ee48e33b32af6b859bcf8ff3"
+  integrity sha512-HS5DwLe42fmkDgu4+78zMITNK+WiLoHKHBCCOuoEqjmsvvKaH/ByCGJOHYgTTe0aI+AiTAAkR2sZ2YulAjlvlQ==
+  dependencies:
+    "@babel/core" "^7.0.0"
+    "@vue/babel-preset-app" "^3.3.0"
+    babel-loader "^8.0.4"
+
+"@vue/cli-plugin-e2e-nightwatch@^3.2.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-e2e-nightwatch/-/cli-plugin-e2e-nightwatch-3.3.0.tgz#29d530d9d3d17c82cdf0ae0c0f2b1218358cbfb4"
