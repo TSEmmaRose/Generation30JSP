@@ -829,3 +829,23 @@
 "@vue/cli-plugin-e2e-nightwatch@^3.2.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-e2e-nightwatch/-/cli-plugin-e2e-nightwatch-3.3.0.tgz#29d530d9d3d17c82cdf0ae0c0f2b1218358cbfb4"
+  integrity sha512-lz/+PKlQXAZoaFkjceZdOLJnX8Dm64AekE+iCB0ut0b3qCo6TBGrHwTV2XKyJ7VlkV8PX6ud8LGIUy/0bu2ZSA==
+  dependencies:
+    "@vue/cli-shared-utils" "^3.3.0"
+    chromedriver "^2.45.0"
+    deepmerge "^3.0.0"
+    execa "^1.0.0"
+    nightwatch "^0.9.21"
+    selenium-server "^3.141.59"
+
+"@vue/cli-plugin-pwa@^3.2.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-pwa/-/cli-plugin-pwa-3.3.0.tgz#7818db99d96fb711014d7f5e35f24d3f909527b7"
+  integrity sha512-UnhKeWmPe0IeNFei0eIeRvXnsTRFNRGDuqHK0M1eEX9GgCQQ4iPFK+0/wneEbsqorgx+c0rqHUL1S/Q8S7DnJg==
+  dependencies:
+    "@vue/cli-shared-utils" "^3.3.0"
+    workbox-webpack-plugin "^3.6.3"
+
+"@vue/cli-plugin-typescript@^3.2.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-typescript/-/cli-plugin-typescript-3.3.0.tgz#a278010e0959e
