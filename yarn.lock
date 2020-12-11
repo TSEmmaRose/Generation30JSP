@@ -1293,4 +1293,23 @@ aion-web3-core@1.1.5:
     aion-web3-core-requestmanager "1.1.5"
     aion-web3-utils "1.1.5"
 
-aion-web3-eth-abi@1.1
+aion-web3-eth-abi@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3-eth-abi/-/aion-web3-eth-abi-1.1.5.tgz#ca15f3864ea49276d2c39f4fc902b15abee5eec7"
+  integrity sha512-gC+bd/eoaa/QPWTQjn3t3hJwA4jhM+Gw9xmGl0Iv8C5bhqmTIR/a+IYF9vSgGlQpmzAxS1PH1aYpYxr4JeFZlg==
+  dependencies:
+    aion-lib "1.1.5"
+    aion-web3-utils "1.1.5"
+    bn.js "^4.11.8"
+    safe-buffer "^5.1.2"
+    underscore "1.8.3"
+
+aion-web3-eth-accounts@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3-eth-accounts/-/aion-web3-eth-accounts-1.1.5.tgz#1d1cc48dcc707026d85a957987e1af5eac9af98c"
+  integrity sha512-VE5u8Tgloeup+L8qIJF8nJqWbHDvmxylEqAvD3YG0Kijvqkr/R9gSCU40ICVG3w5W+kflmHIbxrs8n+2fj0iCw==
+  dependencies:
+    aion-lib "1.1.5"
+    aion-rlp "^0.0.1"
+    aion-web3-core "1.1.5"
+    
