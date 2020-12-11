@@ -1196,4 +1196,24 @@ address@^1.0.3:
 
 aes-js@3.0.0:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df1
+  resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df10ad6c2053295bcbb8dab40b09dbea87e4d"
+  integrity sha1-4h3xCtbCBTKVvLuNq0Cwnb6ofk0=
+
+agent-base@2:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-2.1.1.tgz#d6de10d5af6132d5bd692427d46fc538539094c7"
+  integrity sha1-1t4Q1a9hMtW9aSQn1G/FOFOQlMc=
+  dependencies:
+    extend "~3.0.0"
+    semver "~5.0.1"
+
+aion-browser-solc@tojen/browser-solc:
+  version "1.0.0"
+  resolved "https://codeload.github.com/tojen/browser-solc/tar.gz/6b8762f5bc15c0ab60f75e682adad7e22a8c4b7e"
+
+aion-lib@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-lib/-/aion-lib-1.1.5.tgz#9380d54a854a0e57a64cce1a68d0c7af430e0878"
+  integrity sha512-cPQ7sSkSkyUsav6YqYF5Hgnuk9tt4UL1E+aFPw6DQZzBTeHT5+5pCPJhH98dEqBaXgBswQ5jGimmIDxLTiiuiQ==
+  dependencies:
+ 
