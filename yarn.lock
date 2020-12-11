@@ -1276,4 +1276,21 @@ aion-web3-core-requestmanager@1.1.5:
 
 aion-web3-core-subscriptions@1.1.5:
   version "1.1.5"
-  resolved "https://registry.yarnpkg.com/aio
+  resolved "https://registry.yarnpkg.com/aion-web3-core-subscriptions/-/aion-web3-core-subscriptions-1.1.5.tgz#2e5273e64989aac4d6f8d6fd8bef3b20bfd9861d"
+  integrity sha512-7TQ/eVKeUEM0HGIek6xIFV2JSakT3uycL7sM9iKrBjXKO8G9h0bBmItJsoZNWDEcSQNAMQcF/9MVh8XbHB6tjw==
+  dependencies:
+    aion-web3-core-helpers "1.1.5"
+    eventemitter3 "1.1.1"
+    underscore "1.8.3"
+
+aion-web3-core@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3-core/-/aion-web3-core-1.1.5.tgz#39fdc162d21871c6c2223f34e28981eb03037b24"
+  integrity sha512-hEa6WaZQieF8GJ1FzUo29jy1Smn4Dtm64cLuS8oyJxP4nea0N8l20Z7aUzJBAfNgAksJPIZBno0PszF0M3rS9A==
+  dependencies:
+    aion-web3-core-helpers "1.1.5"
+    aion-web3-core-method "1.1.5"
+    aion-web3-core-requestmanager "1.1.5"
+    aion-web3-utils "1.1.5"
+
+aion-web3-eth-abi@1.1
