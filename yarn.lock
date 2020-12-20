@@ -1335,4 +1335,21 @@ aion-web3-eth-contract@1.1.5:
 
 aion-web3-eth-personal@1.1.5:
   version "1.1.5"
-  resolved "https://registry.yarnpkg.com/aion-web3-eth-personal/-/aion
+  resolved "https://registry.yarnpkg.com/aion-web3-eth-personal/-/aion-web3-eth-personal-1.1.5.tgz#22689d4393259939b390721afa2e04ab45412fad"
+  integrity sha512-XBe3dtSvSSXqbk6LmEhiga0+IFFqKnG/W9xdY7az5khZcBs3a+5HNaLBXBWU7fh8L+FTCdBD++i6ysGMjZwTNQ==
+  dependencies:
+    aion-web3-core "1.1.5"
+    aion-web3-core-helpers "1.1.5"
+    aion-web3-core-method "1.1.5"
+    aion-web3-net "1.1.5"
+    aion-web3-utils "1.1.5"
+
+aion-web3-eth@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3-eth/-/aion-web3-eth-1.1.5.tgz#e818c373a825bb6b50a8854dcdd1eab4ece47b06"
+  integrity sha512-tx9+gGD6llXhwCrtDkdgQvNxmlENu9fH2VmAqLm4YYTjHKen+heU6n+jJWNaB7px4EjTro1AfVQbTljUrn7YmA==
+  dependencies:
+    aion-web3-core "1.1.5"
+    aion-web3-core-helpers "1.1.5"
+    aion-web3-core-method "1.1.5"
+    aio
