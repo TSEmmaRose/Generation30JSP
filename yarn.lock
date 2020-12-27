@@ -1372,4 +1372,21 @@ aion-web3-net@1.1.5:
 
 aion-web3-providers-http@1.1.5:
   version "1.1.5"
-  resolved "https://registry.yarnpkg.com/aion-web3-providers-http/-/aion-web3-providers-http-1.1.5.tg
+  resolved "https://registry.yarnpkg.com/aion-web3-providers-http/-/aion-web3-providers-http-1.1.5.tgz#772a3cb92935cbe9458ff493edd5e9a889a07f39"
+  integrity sha512-fCcVqGYvtSV+UbpAGccGO9GQbwuXQWB/ueycGXAvIrV+6u5+ucKKfmjYPeLDMDFY0pjQt3J+60VS1G/+ejY2wg==
+  dependencies:
+    aion-web3-core-helpers "1.1.5"
+    xhr2-cookies "1.1.0"
+
+aion-web3-providers-ipc@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3-providers-ipc/-/aion-web3-providers-ipc-1.1.5.tgz#122f66fce81169ed315642c073348c9c94b9eb9a"
+  integrity sha512-mfUS5lHF7yBuwvuJZezVNIqJJBpAmeR5lN1Go1c6JOCs4D3iytdee8DeivUNODWaRp8z/NDN5kzrduKSbUjSVw==
+  dependencies:
+    aion-web3-core-helpers "1.1.5"
+    oboe "2.1.3"
+    underscore "1.8.3"
+
+aion-web3-providers-ws@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3-providers-ws/-/aion-web3-providers-ws-1.1.5.tgz#42a2baece40b98c2e462ac5fcaccf39211136
