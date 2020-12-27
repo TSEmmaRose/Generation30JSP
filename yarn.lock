@@ -1411,4 +1411,22 @@ aion-web3-utils@1.1.5:
     utf8 "2.1.1"
 
 aion-web3@^1.1.0, aion-web3@^1.1.4:
-  version "1.1.5
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3/-/aion-web3-1.1.5.tgz#f986b6ab418e56bb76ce0b1e28203c3b2b984dcc"
+  integrity sha512-4nu/EfEdaunZANpUbfJMwFj5eGjZSZZwpK5xDMy+YlMNbIOoMTt1xPaDwufcgwI6+t1Bk4tH9cVSBOjOpSs+FQ==
+  dependencies:
+    aion-web3-core "1.1.5"
+    aion-web3-eth "1.1.5"
+    aion-web3-eth-personal "1.1.5"
+    aion-web3-net "1.1.5"
+    aion-web3-utils "1.1.5"
+
+ajv-errors@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz#f35986aceb91afadec4102fbd85014950cefa64d"
+  integrity sha512-DCRfO/4nQ+89p/RK43i8Ezd41EqdGIU4ld7nGF8OQ14oc/we5rEntLCUa7+jrn3nn83BosfwZA0wb4pon2o8iQ==
+
+ajv-keywords@^3.1.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.2.0.tgz#e86b819c602cf8821ad637413698f1dec021847a"
+ 
