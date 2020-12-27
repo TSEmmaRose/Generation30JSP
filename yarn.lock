@@ -1389,4 +1389,26 @@ aion-web3-providers-ipc@1.1.5:
 
 aion-web3-providers-ws@1.1.5:
   version "1.1.5"
-  resolved "https://registry.yarnpkg.com/aion-web3-providers-ws/-/aion-web3-providers-ws-1.1.5.tgz#42a2baece40b98c2e462ac5fcaccf39211136
+  resolved "https://registry.yarnpkg.com/aion-web3-providers-ws/-/aion-web3-providers-ws-1.1.5.tgz#42a2baece40b98c2e462ac5fcaccf3921113673a"
+  integrity sha512-j6zX1LDd4ZKbOQVpxlZ+XgwAcp3rsbqU5mrjWKN81HOmkwmrFIFGTS+jnk+1L/e0hc7JhZCPfCFitZp5cofUFQ==
+  dependencies:
+    aion-web3-core-helpers "1.1.5"
+    underscore "1.8.3"
+    websocket "git://github.com/frozeman/WebSocket-Node.git#browserifyCompatible"
+
+aion-web3-utils@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/aion-web3-utils/-/aion-web3-utils-1.1.5.tgz#2497e22e2c7eb368a63e05a63b8766b98a9a5ea2"
+  integrity sha512-QcShY1Gca9o6jOqaIiQC6eypctvp3MA4ZoLNAA+eJ7kn/3F9pDAerqT/PcwVbTp0HuR6IlRMJShKkH9VSVd+tA==
+  dependencies:
+    aion-lib "1.1.5"
+    bn.js "4.11.6"
+    ethjs-unit "0.1.6"
+    number-to-bn "1.7.0"
+    randomhex "0.1.5"
+    safe-buffer "^5.1.2"
+    underscore "1.8.3"
+    utf8 "2.1.1"
+
+aion-web3@^1.1.0, aion-web3@^1.1.4:
+  version "1.1.5
