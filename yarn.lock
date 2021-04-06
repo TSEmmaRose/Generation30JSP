@@ -2070,4 +2070,19 @@ bignumber.js@~4.1.0:
   integrity sha512-eJzYkFYy9L4JzXsbymsFn3p54D+llV27oTQ+ziJG7WFRheJcNZilgVXMG0LoZtlQSKBsJdWtLFqOD0u+U0jZKA==
 
 binary-extensions@^1.0.0:
-  versio
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
+  integrity sha512-DYWGk01lDcxeS/K9IHPGWfT8PsJmbXRtRd2Sx72Tnb8pcYZQFF1oSDb8hJtS1vhp212q1Rzi5dUf9+nq0o9UIg==
+
+bl@^1.0.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/bl/-/bl-1.2.2.tgz#a160911717103c07410cef63ef51b397c025af9c"
+  integrity sha512-e8tQYnZodmebYDWGH7KMRvtzKXaJHx3BbilrgZCfvyLUYdKpK1t5PSPmpkny/SgiTSCnjfLW7v5rlONXVFkQEA==
+  dependencies:
+    readable-stream "^2.3.5"
+    safe-buffer "^5.1.1"
+
+blake2b-wasm@^1.1.0:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/blake2b-wasm/-/blake2b-wasm-1.1.7.tgz#e4d075da10068e5d4c3ec1fb9accc4d186c55d81"
+  integrity sha512-oFIHvXhlz/DUgF0kq5B1CqxIDjIJwh9iDeUUGQUcvgiGz7Wd
