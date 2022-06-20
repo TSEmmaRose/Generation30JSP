@@ -8916,4 +8916,22 @@ postcss-normalize-unicode@^4.0.1:
 
 postcss-normalize-url@^4.0.1:
   version "4.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-url/-/postcss-normalize-url-4.0.1.tgz#10e437f86bc7c7e58f7b9652ed878daaa9
+  resolved "https://registry.yarnpkg.com/postcss-normalize-url/-/postcss-normalize-url-4.0.1.tgz#10e437f86bc7c7e58f7b9652ed878daaa95faae1"
+  integrity sha512-p5oVaF4+IHwu7VpMan/SSpmpYxcJMtkGppYf0VbdH5B6hN8YNmVyJLuY9FmLQTzY3fag5ESUUHDqM+heid0UVA==
+  dependencies:
+    is-absolute-url "^2.0.0"
+    normalize-url "^3.0.0"
+    postcss "^7.0.0"
+    postcss-value-parser "^3.0.0"
+
+postcss-normalize-whitespace@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-normalize-whitespace/-/postcss-normalize-whitespace-4.0.1.tgz#d14cb639b61238418ac8bc8d3b7bdd65fc86575e"
+  integrity sha512-U8MBODMB2L+nStzOk6VvWWjZgi5kQNShCyjRhMT3s+W9Jw93yIjOnrEkKYD3Ul7ChWbEcjDWmXq0qOL9MIAnAw==
+  dependencies:
+    postcss "^7.0.0"
+    postcss-value-parser "^3.0.0"
+
+postcss-ordered-values@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/postcss-ordered-values/-/postcss-ordered-valu
