@@ -9529,4 +9529,24 @@ regjsparser@^0.1.4:
 regjsparser@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.6.0.tgz#f1e6ae8b7da2bae96c99399b868cd6c933a2ba9c"
-  integrity sha512-RQ7YyokLiQBomUJuUG8iGVvkgOLxwyZM8k6d3q5SAXpg4r5TZJZigKF
+  integrity sha512-RQ7YyokLiQBomUJuUG8iGVvkgOLxwyZM8k6d3q5SAXpg4r5TZJZigKFvC6PpD+qQ98bCDC5YelPeA3EucDoNeQ==
+  dependencies:
+    jsesc "~0.5.0"
+
+relateurl@0.2.x:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
+  integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+remove-trailing-separator@^1.0.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
+  integrity sha1-wkvOKig62tW8P1jg1IJJuSN52O8=
+
+renderkid@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/renderkid/-/renderkid-2.0.2.tgz#12d310f255360c07ad8fde253f6c9e9de372d2aa"
+  integrity sha512-FsygIxevi1jSiPY9h7vZmBFUbAOcbYm9UwyiLNdVsLRs/5We9Ob5NMPbGYUTWiLq5L+ezlVdE0A8bbME5CWTpg==
+  dependencies:
+    css-select "^1.1.0"
+  
