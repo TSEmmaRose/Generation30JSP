@@ -11581,4 +11581,17 @@ vue-clipboard2@^0.2.1:
 vue-codemirror@^4.0.5:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/vue-codemirror/-/vue-codemirror-4.0.6.tgz#b786bb80d8d762a93aab8e46f79a81006f0437c4"
-  integrity s
+  integrity sha512-ilU7Uf0mqBNSSV3KT7FNEeRIxH4s1fmpG4TfHlzvXn0QiQAbkXS9lLfwuZpaBVEnpP5CSE62iGJjoliTuA8poQ==
+  dependencies:
+    codemirror "^5.41.0"
+    diff-match-patch "^1.0.0"
+
+vue-draggable-resizable@^1.7.5:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/vue-draggable-resizable/-/vue-draggable-resizable-1.7.5.tgz#25a42d6e2400dde11ee0e42cb6760f402380c81e"
+  integrity sha512-+L0tqbZYuskfSpKlk1EfsB9OOuy7NNFPaIry4nZ7g+Sr4JaL5xQ6pEaE5IavkV9M/riX/1pr6uAPc9pLxcqfLg==
+
+vue-eslint-parser@^4.0.2, vue-eslint-parser@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-4.0.3.tgz#80cf162e484387b2640371ad21ba1f86e0c10a61"
+  integrity sha512-AUeQsYdO6+7QXCems+WvGlrXd37PHv/zcRQSQdY1xdOMwdFAPEnMBsv7zPvk0TPGulXk
