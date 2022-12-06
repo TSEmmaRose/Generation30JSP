@@ -11728,4 +11728,24 @@ watchpack@^1.5.0:
 wbuf@^1.1.0, wbuf@^1.7.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/wbuf/-/wbuf-1.7.3.tgz#c1d8d149316d3ea852848895cb6a0bfe887b87df"
- 
+  integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
+  dependencies:
+    minimalistic-assert "^1.0.0"
+
+wcwidth@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
+  integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
+  dependencies:
+    defaults "^1.0.3"
+
+web3-bzz@1.0.0-beta.37:
+  version "1.0.0-beta.37"
+  resolved "https://registry.yarnpkg.com/web3-bzz/-/web3-bzz-1.0.0-beta.37.tgz#59e3e4f5a9d732731008fe9165c3ec8bf85d502f"
+  integrity sha512-E+dho49Nsm/QpQvYWOF35YDsQrMvLB19AApENxhlQsu6HpWQt534DQul0t3Y/aAh8rlKD6Kanxt8LhHDG3vejQ==
+  dependencies:
+    got "7.1.0"
+    swarm-js "0.1.37"
+    underscore "1.8.3"
+
+web3-core-helpers@1.
